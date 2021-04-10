@@ -48,6 +48,17 @@ Questo micro modulo e' pensato per dotare i modelli in scala delle tipiche *lant
 
 ## Collegamenti Elettrici
 
+Nella seguente immagine sono riportati i collegamenti elettrici del Modulo:
+
+<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/collegamenti.jpg" width="1280">
+
+Spiegazione:
+- Rotaie: Queste due piazzole sono destinate alle prese di corrente del rotabile, sono infatti collegate al ponte di diodi interno per l'alimentazione del Modulo.
+- PowerPack: Queste piazzole sono pensate per collegare il condensatore esterno (vedere sezione [Condensatore PowerPack](#predisposizione-condensatore-powerpack), hanno **polarita' ed ESSA VA RISPETTATA**; a queste piazzole e' collegato il circuito di *ricarica lenta* del condensatore.
+  - La piazzola *Esterna* e' il **GND**
+  - La piazzola *Interna* e' il U+ prodotto dal ponte di diodi interno.
+ *N.B.* Queste piazzole possono essere utilizzate per alimentare il modulo da una fonte in *corrente continua* esterna.
+
 ------------
 
 ## FirmWare
