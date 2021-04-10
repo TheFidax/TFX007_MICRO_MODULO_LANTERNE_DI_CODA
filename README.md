@@ -46,6 +46,10 @@ Questo micro modulo e' pensato per dotare i modelli in scala delle tipiche *lant
 
 ------------
 
+## Collegamenti Elettrici
+
+------------
+
 ## FirmWare
 Il Firmware dedicato e' presente sotto la cartella [FirmWare](https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/tree/main/FirmWare), per poterlo caricare è consigliata la seguente [Scheda di Prototipizzazione](xxx) e il programmatore [USBasp](https://www.fischl.de/usbasp/).</br>
 Le cifre finali del file .HEX identificano la versione del FirmWare.
@@ -129,114 +133,10 @@ Come ulteriore protezione la scheda **può essere equipaggiata** con un sistema 
 
 ------------
 
-### Protezione Sovratensioni (Opzionale)
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/ltc4367.jpg" width="1280">
-
-Questa protezione **e' opzionale**: la sua presenza **e' segnalata dal Jumper J1 *aperto***. (**N.B.** Nella revisione HardWare 1.00 il Jumper J1 **e' assente**, e' stato introdotto dalla versione 1.01)</br>
-Le normative [NMRA](https://www.nmra.org/sites/default/files/standards/sandrp/pdf/s-9.1_electrical_standards_2020.pdf) e [NEM](https://morop.org/downloads/nem/fr/nem670_f.pdf) **impongono** che un decoder digitali *supportino* tensioni fino a 27 volt.</br>
-L'utilizzo di condensatori a 25 volt *non e' a norma*. **Tuttavia** le stesse normative impongono che la centrale fornisca tensione *massima* di 22 volt.</br>
-Pertanto in condizioni di *funzionamento corretto* i condensatori non riceveranno tensioni che possano danneggiarli.
-
-Gli stessi produttori commerciali *consigliano* condensatori da 25 volt:
-<img src="https://images.beneluxspoor.net/bnls/aansluitschema_lokpilot_v3.jpg" width="1280">
-
-**In caso di impiego della Scheda su sistemi a Corrente Alternata Analogica questa protezione E' OBBLIGATORIA!** 
-
-Il sistema di protezione si basa sul chip [LTC4367](https://www.analog.com/en/products/ltc4367.html) che **isola** mediante *MOSFET* i condensatori in caso di tensioni *superiori a 23,7 volt*; quando la tensione scende sotto questa soglia i condensatori torneranno alimentati.</br>
-
-------------
-
-### Microchip ATmega128A
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/atmega.jpg" width="1280">
-
-Il *cervello* della scheda e' un microcontrollore [ATmega128A](https://www.microchip.com/wwwproducts/en/ATmega128A) a 64 pin operante a 5 volt con frequenza di 16MHz tramite cristallo esterno.</br>
-Il microcontrollore comanda *in maniera indipendente* tutti (leggere NOTA) i LED, in modo tale da garantire la massima flessibilita' di funzionamento.
-
-*NOTA*: Il corridoio e' progettato con *5 segmenti* da 3 led ognuno: il microcontrollore comanda il segmento e **non** il singolo LED.
-
-Il chip e' programmabile **anche** utilizzando l'**Arduino IDE** (mediante *programmatore ISP*) tramite il [MegaCore](https://github.com/MCUdude/MegaCore).</br>
-
-I valori dei **FUSE** sono i seguenti: 
-- LOW: 0x3F
-- High: 0xC7
-- Extended: 0xFF
-- LOCKBITS: 0x3F
-
-Il microcontrollore **non può** essere dotato di *bootloader*: non e' presente una porta Seriale.
-
-------------
-
-### Lettura Segnale Digitale
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/dcc.jpg" width="1280">
-
-Il segnale digitale e' letto mediante [Optoisolatore TLP2168](https://toshiba.semicon-storage.com/eu/semiconductor/product/optoelectronics/detail.TLP2168.html) che fornisce l'[isolamento galvanico](https://it.wikipedia.org/wiki/Isolamento_elettrico) del microcontrollore dalla tensione delle rotaie.</br> 
-L'optoisolatore e' protetto dall'inversione di corrente mediante Diodo e da un eccessiva corrente mediante resistore.</br>
-Tale chip e' bicanale e permette, inoltre, il rilevamento della presenza di un Decoder Esterno analizzando la linea U+ fornita da esso.</br>
-Questo sistema **e' compatibile con il DCC e con il Motorola**.
-
-------------
-
-### Sistema ACK
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/ack.jpg" width="1280">
-
-La scheda e' dotata di sistema per fornire l'ACK nella **programmazione DCC mediante binario di programmazione**.
-
-------------
-
-### Porta di Programmazione ISP
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/isp.jpg" width="1280">
-
-Per programmare il microcontrollore e' presente *una porta di programmazione ISP* con connettore JST SH6 per prevenire connessioni invertite.</br>
-Questa porta svolge la doppia funzione di **Porta ISP** e **Porta I2C** mediante il seguente schema:</br>
-
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/isp_i2c.jpg" width="1280">
-
-------------
-
-### Illuminazione Compartimenti con Luci Diurne e Notturne
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/luci_compartimenti.jpg" width="1280">
-
-Questa scheda fornisce, per ogni compartimento, la **doppia illuminazione**: *Diurna* con LED Bianco Freddo e *Notturna* con LED Blu.</br>
-Ogni LED e' indipendente e puo' essere pilotato dal microcontrollore in maniera indipendente dall'altro.</br>
-
-------------
-
-### Luci di Coda Rosse
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/luci_coda_pad.jpg" width="1280">
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/luci_coda_npn.jpg" width="1280">
-
-Su entrambi i lati sono presenti le connessioni per delle **Luci di Coda Rosse**.</br>
-Le connessioni prevedere un *polo positivo* collegato alla linea a **5 volt** e un *polo negativo* pilotato dal micro tramite transistor.
-
-------------
-
-### Interfaccia PluX
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/plux.jpg" width="1280">
-
-E' presente un **connettore PluX** per poter utilizzare decoder commerciali.</br>
-Durante il funzionamento con Decoder, la scheda di illuminazione diventa un [Modulo SUSI](https://github.com/TheFidax/Rcn600), questa configurazione diventa necessario se e' richiesto un protocollo *proprietario* non decodifcicabile dalla scheda.</br>
-Protocolli come:
-- [MFX/M4](https://en.wikipedia.org/wiki/M%C3%A4rklin_Digital)
-- [RailCom Plus](http://www.esu.eu/en/support/white-papers/railcomplusr/) 
-
-Il connettore PluX fornisce il collegamento alle rotaie (per portare i comandi al Decoder), il [Bus SUSI](https://dccwiki.com/SUSI) (per utilizzare la scheda come modulo SUSI) e il collegamento per un altoparlante (in caso di decoder sonori: es. [ESU LokSound v5 FX](http://www.esu.eu/en/products/loksound/loksound-5-fx/)).
-
-**ATTENZIONE! Non è previsto un "motore fittizio" pertanto in caso di decoder "per locomotive" la *Lettura/Scrittura* delle CVs e' permessa soltanto tramite *PoM!***
-
-------------
-
-### Porta SUSI
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/susi.jpg" width="1280">
-
-Per garantire la massima personalizzazione, e' presente anche **una porta SUSI** per eventuali moduli SUSI esterni.
-
-------------
-
 ## Assemblaggio
-Il file *BoM* comprende la lista di tutti i pezzi necessario all'assemblaggio in proprio della scheda.</br>
-Per esperienza personale consiglio di cominciare l'assemblaggio dal Chip **LTC4367** in quanto il più ostico da saldare a mano; nel caso in cui questo chip *non fosse richiesto* allora è consigliabile cominciare dal *Microcontrollore ATmega128A*.
+A causa delle ridotte dimensioni sul PCB **non sono presenti i nomi dei componenti**.
 
-I successivi pezzi possono essere saldati seguendo un ordine a scelta dell'utente.
+*Per conoscere nomi e ordine di Assemblaggio* fare riferimento al Progetto su CircuitMaker: https://workspace.circuitmaker.com/Projects/Details/luca-fidanza/Micro-RedLights-Module
 
 *Nel caso in cui si volesse la scheda **gia' assemblata** e' possibile contattarmi all'indirizzo mail sottoriportato oppure seguire eventuali aste di pezzi in esubero sul mio profilo **Ebay***: https://www.ebay.it/sch/the_fidax/m.html
 
