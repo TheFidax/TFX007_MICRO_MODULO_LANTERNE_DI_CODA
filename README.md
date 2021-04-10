@@ -60,12 +60,12 @@ Hanno **polarita' ed ESSA VA RISPETTATA**:
   - La piazzola *Interna* e' il U+ prodotto dal ponte di diodi interno.
  - Lanterna Sinistra: Queste piazzole servono collegare Catodo e Anodo del led della lanterna di Sinistra, hanno un resistore da *1k Ohm* incorporato.</br> 
  Hanno **polarita' ed ESSA VA RISPETTATA**: 
-  - La piazzola *Interna* e' il **GND**
-  - La piazzola *Esterna* e' il **polo positivo** del LED. 
+   - La piazzola *Interna* e' il **GND**
+   - La piazzola *Esterna* e' il **polo positivo** del LED. 
  - Lanterna Destra: Queste piazzole servono collegare Catodo e Anodo del led della lanterna di Destra, hanno un resistore da *1k Ohm* incorporato.</br> 
  Hanno **polarita' ed ESSA VA RISPETTATA**: 
-  - La piazzola *Interna* e' il **GND**
-  - La piazzola *Esterna* e' il **polo positivo** del LED. 
+   - La piazzola *Interna* e' il **GND**
+   - La piazzola *Esterna* e' il **polo positivo** del LED. 
 
 ------------
 
