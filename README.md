@@ -38,9 +38,9 @@ Questo micro modulo e' pensato per dotare i modelli in scala delle tipiche *lant
   - [Micro Dimensioni](#micro-dimensioni)
   - [Ponte di Diodi](#ponte-di-diodi)
   - [Chip Step Down Buck MCP16331](#chip-step-down-buck-mcp16331)
-  - [Predisposizione Condensatore PowerPack](#predisposizione-condensatore-powerpack)
   - [ATtiny10](#attiny10)
   - [Resistori LED incorporati](#resistori-led-incorporati)
+  - [Predisposizione Condensatore PowerPack](#predisposizione-condensatore-powerpack)
 * [Assemblaggio](#Assemblaggio)
 * [Contattami](#Contattami)
 
@@ -80,6 +80,16 @@ Di seguito sono riportate le caratteristiche della scheda, poi spiegate in detta
 
 ------------
 
+### Micro Dimensioni
+<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/modulo_sopra.jpg" width="1280">
+
+Le dimensioni di questo modulo sono le seguenti (con la scritta TFX in alto):
+- Altezza:    10mm
+- Larghezza:  10,5mm
+- Spessore:   Non misurato
+
+------------
+
 ### Ponte di Diodi
 <img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/graetz.jpg" width="1280">
 
@@ -93,9 +103,26 @@ Tale configurazione permette di *raddrizzare* la tensione captata dalle prese di
 ------------
 
 ### Chip Step Down Buck MCP16331
-<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/mcp16331.jpg" width="1280">
+<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/modulo_sotto.jpg" width="1280">
 
 L'alimentazione a 3,3 volt e' fornita dal chip [Microchip MCP16331](https://www.microchip.com/wwwproducts/en/MCP16331), un regolatore di tensione di tipo [Step Down Buck](https://it.wikipedia.org/wiki/Convertitore_buck) in gradi di ricevere in ingresso tensioni fino a 50 volt e di fornire in uscita una tensione stabile a 3,3 volt con sviluppo di calore minimo.</br>
+
+------------
+
+### ATtiny10
+<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/attiny10.jpg" width="1280">
+
+Il lampeggio asincrono e' generato dal chip [ATtiny10](https://www.microchip.com/wwwproducts/en/ATtiny10).</br>
+Questo chip opera alla tensione di 3,3v e pilota i led mediante resistori incorporati sul modulo.
+
+**NOTA: Va programmato PRIMA di saldarlo sul modulo!**
+
+------------
+
+### Restori LED Incorporati
+<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/resistori_led.jpg" width="1280">
+
+Per ridurre al minimo i componenti accessori sul modulo **Sono Gia' Presenti** due resistori da **1kOHm** per i led delle lanterne.
 
 ------------
 
