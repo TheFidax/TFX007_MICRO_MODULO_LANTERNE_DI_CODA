@@ -76,6 +76,8 @@ Le cifre finali del file .HEX identificano la versione del FirmWare.
 
 **NOTA: *E' INDISPENSABILE* CARICARE IL FIRMWARE *PRIMA* DELL'ASSEMBLAGGIO! Pena l'impossibilita' di programmre il Chip ATtiny10**.
 
+La cartella *.Zip* include il codice sorgente e il progetto comodamente visionabile tramite [MPLAB Express Online](https://www.microchip.com/en-us/development-tools-tools-and-software/mplab-xpress) *senza bisogno di registrazione al sito*.
+
 ------------
 
 ## HardWare
