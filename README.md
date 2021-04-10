@@ -1,4 +1,4 @@
-# Scheda di Illuminazione Digitale per vetture [ACME](http://acmetreni.it/index.php/it/) [UicX Giubileo di Seconda Classe](https://scalaenne.wordpress.com/2013/02/09/carrozze-uic-x-parte-quarta-lepoca-xmpr-e-il-revamping/) in Scala H0
+# Micro Modulo per Lanterne di Coda FS
 Questo micro modulo e' pensato per dotare i modelli in scala delle tipiche *lanterne di coda* usate per segnalamento luminoso di fine convoglio.
 
 **Ultima Revisione HardWare: 1.00**
@@ -31,21 +31,16 @@ Questo micro modulo e' pensato per dotare i modelli in scala delle tipiche *lant
 
 ## Indice
 * [Video Presentazione del Progetto](#video-presentazione-del-progetto)
+* [Collegamenti Elettrici](#collegamenti-elettrici)
 * [FirmWare](#firmware)
 * [HardWare](#hardware)
 * [Caratteristiche della Scheda](#caratteristiche-della-scheda)
-  - [Ponte di Diodi Schottky](#ponte-di-diodi-schottky)
+  - [Micro Dimensioni](#micro-dimensioni)
+  - [Ponte di Diodi](#ponte-di-diodi)
   - [Chip Step Down Buck MCP16331](#chip-step-down-buck-mcp16331)
-  - [Condensatori PowerPack](#condensatori-powerpack)
-  - [Protezione Sovratensioni (Opzionale)](#protezione-sovratensioni-opzionale)
-  - [Microchip ATmega128A](#microchip-atmega128a)
-  - [Lettura Segnale Digitale](#lettura-segnale-digitale)
-  - [Sistema ACK](#sistema-ack)
-  - [Porta di Programmazione ISP](#porta-di-programmazione-isp)
-  - [Compartimenti con Luci Diurne e Notturne *indipendenti*](#illuminazione-compartimenti-con-luci-diurne-e-notturne)
-  - [Luci di Coda Rosse](#luci-di-coda-rosse)
-  - [Decoder PluX](#interfaccia-plux)
-  - [Porta SUSI](#porta-susi)
+  - [Predisposizione Condensatore PowerPack](#predisposizione-condensatore-powerpack)
+  - [ATtiny10](#attiny10)
+  - [Resistori LED incorporati](#resistori-led-incorporati)
 * [Assemblaggio](#Assemblaggio)
 * [Contattami](#Contattami)
 
@@ -53,25 +48,22 @@ Questo micro modulo e' pensato per dotare i modelli in scala delle tipiche *lant
 
 
 ## Video Presentazione del Progetto
-[![Video Presentazione](https://img.youtube.com/vi/QNakU0qvuvc/0.jpg)](http://www.youtube.com/watch?v=QNakU0qvuvc )
+[![Video Presentazione](https://img.youtube.com/vi/kVVs_6TyThg/0.jpg)](http://www.youtube.com/watch?v=kVVs_6TyThg)
 
 ------------
 
 ## FirmWare
-Il Firmware dedicato e' presente sotto la cartella [FirmWare](https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/tree/main/FirmWare), per poterlo caricare è consigliata la seguente [Shield](https://github.com/TheFidax/ProgrammerUpdaterShield).</br>
+Il Firmware dedicato e' presente sotto la cartella [FirmWare](https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/tree/main/FirmWare), per poterlo caricare è consigliata la seguente [Scheda di Prototipizzazione](xxx) e il programmatore [USBasp](https://www.fischl.de/usbasp/).</br>
 Le cifre finali del file .HEX identificano la versione del FirmWare.
 
-*NOTA*: Nella cartella e' presente anche un file chiamto *TFX062_TEST_AUX.hex* ; questo firmware attiva, a scheda alimentata, tutte le AUX.</br>
-**Serve Esclusivamente in fase di assemblaggio** per verificare che tutte le saldature siano state effettuate correttamente. **NON E' IL FIRMWARE PER IL FUNZIONAMENTO NORMALE.**
-
-**NOTA: Per conoscere la versione del Firmware presente a bordo e' sufficiente *Leggere la CV 7*.**
+**NOTA: *E' INDISPENSABILE* CARICARE IL FIRMWARE *PRIMA* DELL'ASSEMBLAGGIO! Pena l'impossibilita' di programmre il Chip ATtiny10**.
 
 ------------
 
 ## HardWare
-Il progetto di questa scheda e' disponibile qui: https://workspace.circuitmaker.com/Projects/Details/luca-fidanza/ACME-UIC-X-Giubileo-2nd-Class-H0 .</br>
+Il progetto del Micro Modulo e' disponibile qui: https://workspace.circuitmaker.com/Projects/Details/luca-fidanza/Micro-RedLights-Module .</br>
 **Viene rilasciato con la seguente Licenza**: https://creativecommons.org/licenses/by-nc-nd/4.0/ .</br>
-I **File Gerber**, il **BOM** e il file **Pick and Place** sono nel file **.Zip** disponibile sotto la cartella [HardWare](https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/tree/main/HardWare).</br> 
+I **File Gerber**, il **BOM** e il file **Pick and Place** sono nel file **.Zip** disponibile sotto la cartella [HardWare](https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/tree/main/HardWare).</br> 
 
 **NOTA**: Lo spessore *consigliato* del PCB per questa scheda è di: **0,6mm**
 
@@ -79,26 +71,19 @@ I **File Gerber**, il **BOM** e il file **Pick and Place** sono nel file **.Zip*
 
 ## Caratteristiche della Scheda
 Di seguito sono riportate le caratteristiche della scheda, poi spiegate in dettaglio nei vari paragrafi dedicati.
-- [Schottky Diodes](#ponte-di-diodi-schottky) to provide CC power from Tracks
-- [MCP16331](#chip-step-down-buck-mcp16331) to power Board at 5v
-- [PowerPack](#condensatori-powerpack) system by 4x 100uF Tantalum capacitors with slow charge system and [Overvoltage Isolation system](#protezione-sovratensioni-opzionale).
-- Board can be operate with these systems: CC Analog (from 7v), PWM CC Analog, AC Analog, Digital (DCC & Motorola)
-- [AtMega128A](#microchip-atmega128a) to Digital Operation
-- [Optoisolator to read Digital signal](#lettura-segnale-digitale)
-- [ACK System](#sistema-ack)
-- [JST SH6 connector](#porta-di-programmazione-isp) to program AtMega with ISP system and to provide I2C Bus from external target
-- All [compartments](#illuminazione-compartimenti-con-luci-diurne-e-notturne) illuminated independently (with Day and Night lights)
-- Pads for [tail red lights](#luci-di-coda-rosse)
-- [PluX Interface](#interfaccia-plux) (with Sound and SUSI BUS)
-- [SUSI Port](#porta-susi) for External Module
+- [Micro Dimensions](#micro-dimensioni): 10 x 10.5mm
+- [MCP16331](#chip-step-down-buck-mcp16331) to power module at 3.3v
+- Module can be operate with all systems: [Analog CC, Analog AC and Digital](#ponte-di-diodi)
+- [Builtin](#resistori-led-incorporati) 1kOhm lamps resistors
+- [Slow charge power pack system](#predisposizione-condensatore-powerpack)
 - MINIMUM CLEARANCE: 6mil
 
 ------------
 
-### Ponte di Diodi Schottky
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/ss310.jpg" width="1280">
+### Ponte di Diodi
+<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/graetz.jpg" width="1280">
 
-Il circuito di alimentazione e' realizzato meadiante 4 diodi Schottky in configurazione [Ponte di Graetz](https://it.wikipedia.org/wiki/Raddrizzatore#Ponte_di_Graetz).</br>
+Il circuito di alimentazione e' realizzato meadiante 4 diodi in configurazione [Ponte di Graetz](https://it.wikipedia.org/wiki/Raddrizzatore#Ponte_di_Graetz).</br>
 Tale configurazione permette di *raddrizzare* la tensione captata dalle prese di corrente in Conrente Continua a prescindere del sistema di alimentazione:
 - Corrente Continua Analogica (fornisce sempre gli stessi poli in uscita)
 - Corrente PWM (raddrizza l'onda quadra fornendo una tensione simil continua)
