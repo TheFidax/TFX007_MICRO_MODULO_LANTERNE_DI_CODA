@@ -55,7 +55,7 @@ Nella seguente immagine sono riportati i collegamenti elettrici del Modulo:
 *Spiegazione*:
 - Rotaie: Queste due piazzole sono destinate alle prese di corrente del rotabile, sono infatti collegate al ponte di diodi interno per l'alimentazione del Modulo.</br>
 *Non hanno* un polarita': la connessiore dei fili puo' venire fatta a proprio piacimento.
-- PowerPack: Queste piazzole sono pensate per collegare il condensatore esterno (maggiori dettagli nella sezione [Condensatore PowerPack](#predisposizione-condensatore-powerpack)), a queste piazzole e' collegato il circuito di *ricarica lenta* del condensatore.</br>
+- Condensatore: Queste piazzole sono pensate per collegare il condensatore esterno (maggiori dettagli nella sezione [Condensatore PowerPack](#predisposizione-condensatore-powerpack)), a queste piazzole e' collegato il circuito di *ricarica lenta* del condensatore.</br>
 *Hanno **polarita' ed ESSA VA RISPETTATA***: 
   - La piazzola *Esterna* e' il **GND**
   - La piazzola *Interna* e' il U+ prodotto dal ponte di diodi interno.
