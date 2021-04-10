@@ -7,25 +7,19 @@ Questo micro modulo e' pensato per dotare i modelli in scala delle tipiche *lant
 
 **Alcune Immagini Dimostrative:**
 
-- Carrozza in condizioni luminose *Diurne* con tutti i LED bianchi accesi
+- Modulo Faccia Superiore
 
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/diurna_bianchi.jpg" width="1280">
+<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/modulo_sopra.jpg" width="1280">
 
-- Carrozza in condizione luminose *Diurne* con *corridoio* illuminato e *compartimenti con luci blu*.
+- Modulo Faccia Inferiore
 
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/diurna_blu.jpg" width="1280">
+<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/modulo_sotto.jpg" width="1280">
 
-- Carrozza in condizioni luminose *Notturne* con tutti i LED bianchi accesi 
+- Modulo Montato su Carrozza Corbellini Hachette e Dimostrazione Lanterne
 
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/notturna_bianchi.jpg" width="1280">
-
-- Carrozza in condizione luminose *Notturne* con *corridoio* illuminato e *compartimenti con luci blu*.
-
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/notturna_blu.jpg" width="1280"></br>
-
-- Scheda nella sua posizione appoggiata sopra gli interni:
-
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/scheda_posizionata.jpg" width="1280"></br>
+<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/modulo_montato.jpg" width="1280">
+<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/lanterna_sinistra.jpg" width="1280">
+<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/lanterna_destra.jpg" width="1280">
 
 ------------
 
