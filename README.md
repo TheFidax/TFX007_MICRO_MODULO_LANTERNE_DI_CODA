@@ -124,12 +124,18 @@ Per ridurre al minimo i componenti accessori sul modulo **Sono Gia' Presenti** d
 
 ------------
 
-### Condensatori PowerPack
-<img src="https://github.com/TheFidax/TFX062_ACME_UICX_GIUBILEO_2CLASSE_H0/blob/main/Images/powerpack.jpg" width="1280">
+### Predisposizione Condensatore PowerPack
+<img src="https://github.com/TheFidax/TFX007_MICRO_MODULO_LANTERNE_DI_CODA/blob/main/Images/predisposizione_powerpack.jpg" width="1280">
 
-Per sopperire a problemi di captazione di corrente e' previsto un sistema *powerpack* formato da 4 condensatori al Tantalio da 100uF con tensione **massima** di 25 volt.</br>
-I condensatori sono separati dal circuito di alimentazione da un Diodo ed un Resistore che rappresentano *il sistema di ricarica lenta*.
-Come ulteriore protezione la scheda **può essere equipaggiata** con un sistema di [protezione dalle sovratensioni](https://github.com/TheFidax/TFX040_ROCO_EUROFIMA_2CLASSE_H0#protezione-sovratensioni-opzionale).
+Il modulo *prevede* la possibilita' di usare un condensatore esterno come power pack.
+**E' gia' presente il circuito di ricarica lenta**.
+
+N.B. Queste piazzole *possono* essere usate per alimentare il modulo da una fonte **in Corrente Continua** esterna, fino a 50 volt.
+
+Tensione condensatore:
+- 25 Volt: valore standard **NON** a norma NMRA.
+- 35 Volt: Valone **a norma NMRA**.
+- 50 volt: Valore **OBBLIGATORIO** per impiego su sistemi in *Corrente Alteranata* **Analogici**.
 
 ------------
 
