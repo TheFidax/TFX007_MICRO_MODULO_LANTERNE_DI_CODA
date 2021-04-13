@@ -106,7 +106,7 @@ Di seguito sono riportate le caratteristiche della scheda, poi spiegate in detta
 Le dimensioni di questo modulo sono le seguenti (con la scritta TFX in alto):
 - Altezza:    10mm
 - Larghezza:  10,5mm
-- Spessore:   Non misurato
+- Spessore:   4,3mm
 
 ------------
 
