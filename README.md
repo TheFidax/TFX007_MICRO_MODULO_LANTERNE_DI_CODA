@@ -1,6 +1,8 @@
 # Micro Modulo per Lanterne di Coda FS
 Questo micro modulo e' pensato per dotare i modelli in scala delle tipiche *lanterne di coda* usate per segnalamento luminoso di fine convoglio.
 
+**Codice Identificativo Progetto: TFX007**
+
 **Ultima Revisione HardWare: 1.00**
 
 **Ultima Revisione SoftWare: 1.00**
