@@ -175,4 +175,4 @@ A causa delle ridotte dimensioni sul PCB **non sono presenti i nomi dei componen
 ## Contattami
 Per curiosita' o ulteriori informazioni puo contattarmi al seguente indirizzo email:  	TheFidaxContactsAtgmail.com
 
-*NOTA*:Sostituire 'At' con '@'
+**NOTA**: é *Necessario* sostituire 'At' con '@'
