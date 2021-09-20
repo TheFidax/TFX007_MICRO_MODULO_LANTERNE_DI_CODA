@@ -5,7 +5,7 @@ Questo micro modulo e' pensato per dotare i modelli in scala delle tipiche *lant
 
 **Ultima Revisione HardWare: 1.00**
 
-**Ultima Revisione SoftWare: 1.00**
+**Ultima Revisione SoftWare: 2.00**
 
 **Alcune Immagini Dimostrative:**
 
