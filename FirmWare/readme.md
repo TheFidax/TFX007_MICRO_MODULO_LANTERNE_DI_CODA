@@ -175,6 +175,8 @@ uint8_t getRandom(void) {
 
 ```
 
+------------
+
 # TIMER_ATTINY10_DEFINES.h
 
 ```c
